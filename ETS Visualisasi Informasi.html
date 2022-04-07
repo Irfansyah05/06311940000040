@@ -1,0 +1,105 @@
+<html>
+
+<head>
+  <title>NBA Eastern Conference Teams Point in 2022 </title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<h1> ETS Visualisasi Informasi</h1>
+<h2> Muhammad Irfansyah - 06311940000040</h2>
+<body>
+  <div>
+    <canvas id="myChart"></canvas>
+  </div>
+
+  <script>
+    const labels = [
+      'Atlanta Hawks',
+      'Boston Celtics',
+      'Brooklyn Nets',
+      'Chicago Bulls',
+      'Charlotte Hornets',
+      'Cleveland Cavaliers',
+      'Detroit Pistons',
+      'Indiana Pacers',
+      'Miami Heat',
+      'Milwaukee Bucks',
+      'New York Knicks',
+      'Orlando Magic',
+      'Philadelphia 76ers',
+      'Toronto Raptors',
+      'Washington Wizards',
+
+    ];
+
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'My First dataset',
+        backgroundColor: [
+          'rgb(225,68,52)',
+          'rgb(0,131,72)',
+          'rgb(0,0,0)',
+          'rgb(206,17,65)',
+          'rgb(0,120,140)',
+          'rgb(111,38,61)',
+          'rgb(200,16,46)',
+          'rgb(253,187,48)',
+          'rgb(152,0,46)',
+          'rgb(0,71,27)',
+          'rgb(245,132,38)',
+          'rgb(0,125,197)',
+          'rgb(255,255,255)',
+          'rgb(180,151,90)',
+          'rgb(0,43,92)',
+        ],
+        borderColor: ['rgb(250,204,0)','rgb(250,204,0)','rgb(250,204,0)'],
+        data: [
+          6754, 
+          6880, 
+          6865, 
+          6966, 
+          7186, 
+          6503, 
+          6285, 
+          6914, 
+          6786, 
+          7043, 
+          6407, 
+          6437, 
+          6494, 
+          6520, 
+          6448],
+      }]
+    };
+    let delayed;
+    const config = {
+      type: 'pie',
+      data: data,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+          title: {
+            display: true,
+            text: 'NBA Eastern Conference Teams Point in 2022'
+          }
+        }
+      },
+    };
+
+  </script>
+
+  <script>
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+  </script>
+
+
+</body>
+
+</html>
